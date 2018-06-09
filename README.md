@@ -15,11 +15,11 @@ Hit the following in CMD/Terminal if you don't have already them installed:
     pip install tensorflow
     pip install opencv-python
     
-That's it foor now.
+That's it for now.
 
 So let's take a brief look at each step.
 
-## STEP 1 - Implementation of OpenCV HAARCASCADES
+## STEP 1 - Implementation of OpenCV HAAR CASCADES
 
 I'm using the "Frontal Face Alt" Classifier for detecting the presence of Face in the WebCam. This file is included with this repository. You can find the other classifiers [here](https://github.com/opencv/opencv/tree/master/data/haarcascades).
 

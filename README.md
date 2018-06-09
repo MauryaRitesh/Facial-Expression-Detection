@@ -51,6 +51,8 @@ Now run the "label.py" program by typing the following in CMD/Terminal:
       
      python label.py
      
-It'll open a new window of OpenCV and the identifies your Facial Expression.
+It'll open a new window of OpenCV and then identifies your Facial Expression.
+We are done now!
+
 
 PLEASE DO STAR THIS REPO IF YOU FOUND SOMETHING INTERESTING. <3 Each Viewer.

@@ -23,7 +23,7 @@ So let's take a brief look at each step.
 
 I'm using the "Frontal Face Alt" Classifier for detecting the presence of Face in the WebCam. This file is included with this repository. You can find the other classifiers [here](https://github.com/opencv/opencv/tree/master/data/haarcascades).
 
-Next, we have the task to load this file, which can be found in the [label.py]() program. E.g.:
+Next, we have the task to load this file, which can be found in the [label.py](https://github.com/MauryaRitesh/Facial-Expression-Detection/blob/master/label.py) program. E.g.:
 
     # We load the xml file
     classifier = cv2.CascadeClassifier('haarcascade_frontalface_alt.xml')

@@ -1,6 +1,6 @@
 # Facial-Expression-Detection
 
-This is the code for [this video](youtube.com) by Ritesh on YouTube.
+This is the code for [this video](https://youtu.be/Dqa-3N8VZbw) by Ritesh on YouTube.
 
 Facial Expression or Facial Emotion Detector can be used to know whether a person is sad, happy, angry and so on only through his/her face. This Repository can be used to carry out such a task. It uses your WebCamera and then identifies your expression in Real Time. Yeah in real-time!
 
@@ -37,7 +37,7 @@ This step will consist of several sub steps:
 
 - We need to first create a directory named images. In this directory, create five or six sub directories with names like Happy, Sad, Angry, Calm and Neutral. You can add more than this.
 - Now fill these directories with respective images by downloading them from the Internet. E.g., In "Happy" directory, fill only those iages of person who are happy.
-- Now run the "face-crop.py" program as suggested in the [video]()
+- Now run the "face-crop.py" program as suggested in the [video](https://youtu.be/Dqa-3N8VZbw)
 - Once you have only cleaned images, you are ready to retrain the network. For this purpose I'm using Mobilenet Model which is quite fast and accurate. To run the training, hit the got to the parent folder and open CMD/Terminal here and hit the following:
 
       python -m scripts.retrain --output_graph=retrained_graph.pb --output_labels=retrained_labels.txt --architecture=MobileNet_1.0_224 --image_dir=images
@@ -46,7 +46,7 @@ That's it for this Step.
 
 ## STEP 3 - Importing the ReTrained Model and Setting Everything Up
 
-Finally, I've put everything under the "label_tf.py" file from where you can get evrything.
+Finally, I've put everything under the "label_image.py" file from where you can get evrything.
 Now run the "label.py" program by typing the following in CMD/Terminal:
       
      python label.py

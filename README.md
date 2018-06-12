@@ -40,7 +40,7 @@ This step will consist of several sub steps:
 - Now run the "face-crop.py" program as suggested in the [video](https://youtu.be/Dqa-3N8VZbw)
 - Once you have only cleaned images, you are ready to retrain the network. For this purpose I'm using Mobilenet Model which is quite fast and accurate. To run the training, hit the got to the parent folder and open CMD/Terminal here and hit the following:
 
-      python -m scripts.retrain --output_graph=retrained_graph.pb --output_labels=retrained_labels.txt --architecture=MobileNet_1.0_224 --image_dir=images
+      python retrain.py --output_graph=retrained_graph.pb --output_labels=retrained_labels.txt --architecture=MobileNet_1.0_224 --image_dir=images
 
 That's it for this Step.
 

@@ -55,4 +55,4 @@ It'll open a new window of OpenCV and then identifies your Facial Expression.
 We are done now!
 
 
-PLEASE DO STAR THIS REPO IF YOU FOUND SOMETHING INTERESTING. <3 Each Viewer.
+PLEASE DO STAR THIS REPO IF YOU FOUND SOMETHING INTERESTING. <3

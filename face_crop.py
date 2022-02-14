@@ -1,12 +1,10 @@
 ## This program first ensures if the face of a person exists in the given image or not then if it exists, it crops
-## the image of the face and saves to the given directory.
+## the image of the face and saves it in the given directory.
 
 ## Importing Modules
 import cv2
 import os
 
-
-#################################################################################
 
 ##Make changes to these lines for getting the desired results.
 
@@ -16,7 +14,6 @@ directory = "E:/data/vids/a"
 ## directory where the images to be saved:
 f_directory = "E:/data/vids/Yawning/"
 
-################################################################################
             
 def facecrop(image):
     ## Crops the face of a person from any image!

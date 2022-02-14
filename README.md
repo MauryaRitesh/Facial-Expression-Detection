@@ -46,7 +46,7 @@ That's it for this Step.
 
 ## STEP 3 - Importing the ReTrained Model and Setting Everything Up
 
-Finally, I've put everything under the "label_image.py" file from where you can get evrything.
+Finally, I've put everything under the "label_image.py" file from where you can get everything.
 Now run the "label.py" program by typing the following in CMD/Terminal:
       
      python label.py

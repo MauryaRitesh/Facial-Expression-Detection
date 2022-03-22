@@ -1,3 +1,4 @@
+## Credit: Some parts of the program has been taken from OpenCV documentation
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function

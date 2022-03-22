@@ -1,9 +1,8 @@
 <?xml version="1.0"?>
 <!--
     Stump-based 20x20 gentle adaboost frontal face detector.
-    Created by Rainer Lienhart.
+    [Credit] Created by Rainer Lienhart.
 
-////////////////////////////////////////////////////////////////////////////////////////
 
   IMPORTANT: READ BEFORE DOWNLOADING, COPYING, INSTALLING OR USING.
 
@@ -42,6 +41,7 @@
  or tort (including negligence or otherwise) arising in any way out of
  the use of this software, even if advised of the possibility of such damage.
 -->
+
 <opencv_storage>
 <cascade type_id="opencv-cascade-classifier"><stageType>BOOST</stageType>
   <featureType>HAAR</featureType>

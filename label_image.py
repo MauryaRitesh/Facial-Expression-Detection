@@ -13,13 +13,13 @@ import tensorflow as tf
 
 #function to load TensorFlow graph from a model file
 def load_graph(model_file):
-  graph = tf.Graph()
+  graph = tf.Graph()  #creating a tensorflow computation graph
   graph_def = tf.GraphDef()
 
   with open(model_file, "rb") as f:
-    graph_def.ParseFromString(f.read())
-  with graph.as_default():
-    tf.import_graph_def(graph_def)
+    graph_def.ParseFromString(f.read())  #parsing binary graph definition
+  with graph.as_default():       #setting this graph as default computation graph
+    tf.import_graph_def(graph_def)     #importing graph definitions into current graph
 
   return graph
 
@@ -29,21 +29,21 @@ def read_tensor_from_image_file(file_name, input_height=299, input_width=299,
   input_name = "file_reader"
   output_name = "normalized"
   file_reader = tf.read_file(file_name, input_name)
-  if file_name.endswith(".png"):
+  if file_name.endswith(".png"):   # if a PNG image, setting the number of color channels to 3
     image_reader = tf.image.decode_png(file_reader, channels = 3,
                                        name='png_reader')
-  elif file_name.endswith(".gif"):
+  elif file_name.endswith(".gif"):   # if a GIF image, removing the singleton dimension
     image_reader = tf.squeeze(tf.image.decode_gif(file_reader,
                                                   name='gif_reader'))
-  elif file_name.endswith(".bmp"):
+  elif file_name.endswith(".bmp"):    # if bmp, then decoding a BMP image
     image_reader = tf.image.decode_bmp(file_reader, name='bmp_reader')
-  else:
+  else:                                #default: decoding the image as a JPEG with 3 color channels
     image_reader = tf.image.decode_jpeg(file_reader, channels = 3,
                                         name='jpeg_reader')
-  float_caster = tf.cast(image_reader, tf.float32)
-  dims_expander = tf.expand_dims(float_caster, 0);
-  resized = tf.image.resize_bilinear(dims_expander, [input_height, input_width])
-  normalized = tf.divide(tf.subtract(resized, [input_mean]), [input_std])
+  float_caster = tf.cast(image_reader, tf.float32)  #converting the image into float32 dtype
+  dims_expander = tf.expand_dims(float_caster, 0); #adding batch dimension 
+  resized = tf.image.resize_bilinear(dims_expander, [input_height, input_width]) #resizing the image
+  normalized = tf.divide(tf.subtract(resized, [input_mean]), [input_std])  #normalizing the image
   sess = tf.Session()
   result = sess.run(normalized)
 
@@ -54,7 +54,7 @@ def load_labels(label_file):
   label = []
   proto_as_ascii_lines = tf.gfile.GFile(label_file).readlines()
   for l in proto_as_ascii_lines:
-    label.append(l.rstrip())
+    label.append(l.rstrip())  #appending labels after stripping newline characters
   return label
 
 #main function for image classification
@@ -82,6 +82,7 @@ def main(img):
   parser.add_argument("--output_layer", help="name of output layer")
   args = parser.parse_args()
 
+  #over-riding default values with command line arguments(if provided)
   if args.graph:
     model_file = args.graph
   if args.image:
@@ -102,7 +103,7 @@ def main(img):
     output_layer = args.output_layer
 
   graph = load_graph(model_file)
-  t = read_tensor_from_image_file(file_name,
+  t = read_tensor_from_image_file(file_name,                 #reading and pre-processing the image input
                                   input_height=input_height,
                                   input_width=input_width,
                                   input_mean=input_mean,
@@ -110,20 +111,20 @@ def main(img):
 
   input_name = "import/" + input_layer
   output_name = "import/" + output_layer
-  input_operation = graph.get_operation_by_name(input_name);
+  input_operation = graph.get_operation_by_name(input_name);  # obtaining references to the input and output operations within the graph
   output_operation = graph.get_operation_by_name(output_name);
 
   #running the image through the model
   with tf.Session(graph=graph) as sess:
-    start = time.time()
+    start = time.time() #starting the timer
     results = sess.run(output_operation.outputs[0],
                       {input_operation.outputs[0]: t})
-    end=time.time()
-  results = np.squeeze(results)
+    end=time.time()  #recording the end time for measuring performance
+  results = np.squeeze(results) #removing dimensions of size 1, making it a 1D Array
 
   #identifying the top k results
   top_k = results.argsort()[-5:][::-1]
   labels = load_labels(label_file)
 
   for i in top_k:
-    return labels[i]
+    return labels[i] #returning the label with highest confidence

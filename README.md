@@ -1,6 +1,10 @@
 ### Read this in other languages
+
+<div align="center">
     
 [<img title="हिंदी" alt="हिंदी" src="https://cdn.statically.io/gh/hjnilsson/country-flags/master/svg/in.svg" width="22">](translation/README.Hindi.md)
+</div>
+
 
 # Facial-Expression-Detection
 

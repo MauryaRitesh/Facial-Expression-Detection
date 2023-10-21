@@ -1,6 +1,6 @@
 ### Read this in other languages
 
-[<img title="हिंदी" alt="हिंदी" src="https://cdn.statically.io/gh/hjnilsson/country-flags/master/svg/in.svg" width="22">](translations/README.Hindi.md)</kbd>
+[<img title="हिंदी" alt="हिंदी" src="https://cdn.statically.io/gh/hjnilsson/country-flags/master/svg/in.svg" width="22">](translation/README.Hindi.md)</kbd>
 
 # Facial-Expression-Detection
 

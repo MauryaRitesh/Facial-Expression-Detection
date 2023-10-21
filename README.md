@@ -54,5 +54,39 @@ Now run the "label.py" program by typing the following in CMD/Terminal:
 It'll open a new window of OpenCV and then identifies your Facial Expression.
 We are done now!
 
+## Contributing Guidelines
+Thank you for considering contributing to the "Facial-Expression-Detection" project!
+### Getting Started
+
+1.Fork the Repository: To contribute, fork the main repository to your GitHub account.
+
+2.Clone the Repository: Clone your forked repository to your local machine:
+
+```bash
+git clone https://github.com/MauryaRitesh/Facial-Expression-Detection.git
+```
+3.Set Up Development Environment: Install the necessary dependencies if you haven't already. You can do this by running the following commands:
+```python
+pip install tensorflow
+pip install opencv-python
+```
+4.Create a Branch: Create a new branch for your contribution. Choose a descriptive name for the branch that reflects the nature of your contribution.
+```bash
+git checkout -b feature/your-feature-name
+```
+5.Make Your Changes: Make the necessary changes and additions in your branch.
+
+6.Commit Your Changes: Make clear, concise, and well-documented commit messages. Reference any relevant issues or pull requests in your commits.
+
+```bash
+git commit -m "Add new feature"
+```
+7.Push Your Changes: Push your branch to your GitHub repository:
+
+```bash
+git push origin feature/your-feature-name
+```
+8.Create a Pull Request: Create a pull request from your forked repository to the main repository. 
+
 
 PLEASE DO STAR THIS REPO IF YOU FOUND SOMETHING INTERESTING. <3

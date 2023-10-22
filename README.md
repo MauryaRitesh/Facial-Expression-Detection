@@ -15,7 +15,7 @@ Facial Expression or Facial Emotion Detector can be used to know whether a perso
 
 # PLAN
 
-This is a three step process. In the first step, we load the XML file for detecting the presence of faces and then we retrain our network with our image on five diffrent categories. After that, we import the label_image.py program from the [last video]() and set up everything in realtime.
+This is a three step process. In the first step, we load the XML file for detecting the presence of faces and then we retrain our network with our image on five different categories. After that, we import the label_image.py program from the [last video]() and set up everything in realtime.
 
 # DEPENDENCIES
 

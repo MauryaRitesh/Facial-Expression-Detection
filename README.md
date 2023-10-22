@@ -1,3 +1,12 @@
+### Read this in other languages
+
+<div align="center">
+    
+<kbd>[<img title="हिंदी" alt="हिंदी" src="https://cdn.statically.io/gh/hjnilsson/country-flags/master/svg/in.svg" width="22">](translation/README.Hindi.md)</kbd> &nbsp;
+<kbd>[<img title="日本語" alt="日本語" src="https://cdn.statically.io/gh/hjnilsson/country-flags/master/svg/jp.svg" width="22">](translation/README.Japanese.md)</kbd>
+</div>
+
+
 # Facial-Expression-Detection
 
 This is the code for [this video](https://youtu.be/Dqa-3N8VZbw) by Ritesh on YouTube.

@@ -65,6 +65,10 @@ We are done now!
 
 ## Contributing Guidelines
 Thank you for considering contributing to the "Facial-Expression-Detection" project!
+
+### Code of Conduct
+Before you start contributing, please read and adhere to our [Code of Conduct](CODE_OF_CONDUCT.md). We expect all contributors to follow these rules and maintain a respectful and inclusive environment for everyone.
+
 ### Getting Started
 
 1.Fork the Repository: To contribute, fork the main repository to your GitHub account.
